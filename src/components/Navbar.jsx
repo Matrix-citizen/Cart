@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   // "useSelector" access our entire store
-  const amount = useSelector((store) => store.cart.amount);
-  // 2 Way, destructuring. The line below equals above one
-  // const { amount } = useSelector((store) => store.cart);
+  // 1 way, ordinary
+  // const amount = useSelector((store) => store.cart.amount);
+  // 2 way, destructuring. The line below equals above one
+  const { amount } = useSelector((store) => store.cart);
   return (
     <nav>
       <div className='nav-center'>
